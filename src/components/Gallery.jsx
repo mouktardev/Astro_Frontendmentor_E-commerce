@@ -54,7 +54,7 @@ function Gallery({images,thumbnails}){
     }, [currntImage,isPageWide])
 
     return(
-        <div class="flex flex-col md:space-y-10 justify-center items-center">
+        <div class="flex flex-col md:space-y-10 md:justify-center md:items-center">
             {/* buttons render on mobile */}
               { isPageWide && <div class="absolute w-full px-4 bottom-1/2 flex justify-between" >
                     <button className="rounded-full p-3 bg-white" 

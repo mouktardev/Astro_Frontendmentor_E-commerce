@@ -49,7 +49,7 @@ return(
             }
         })()}
         <div class="flex flex-1 items-center space-x-10 sm:space-x-6 justify-end">
-            <ThemeToggle/>
+            {!isPageWide && <ThemeToggle/>}
             <div class="text-gray-900 dark:text-white">   
                 <div class="relative cursor-pointer" onClick={()=> modal ? setModal(false): setModal(true)}>
                { (cart.length> 0) && <div class="absolute -top-1 right-1 px-2 rounded-full leading text-xs text-white bg-yellow-700">{cart.length}</div>}
@@ -57,7 +57,7 @@ return(
                 </div>
                 {modal && <Cart/>}
             </div>
-            <img class="w-20 h-20 border-4 border-yellow-600 rounded-full" src={avatar} alt="avatar" />
+            <img class="w-14 h-13 md:w-20 md:h-20  border-4 border-yellow-600 rounded-full" src={avatar} alt="avatar" />
         </div>
     </nav>
     );

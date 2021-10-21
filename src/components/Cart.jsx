@@ -8,7 +8,7 @@ function Cart(){
   const cart = useStore(shoppingCart);
 
     return(     
-            <div class="absolute w-auto h-auto mx-4 p-5 top-36 right-0 sm:left-0 bg-gray-200 dark:bg-gray-700  rounded-2xl shadow-2xl">
+            <div class="absolute z-10 w-auto h-auto mx-4 p-5 top-36 right-0 sm:left-0 bg-gray-200 dark:bg-gray-700  rounded-2xl shadow-2xl">
                 <h1 class="font-Kumbh mb-8 font-bold text-lg text-left">Cart</h1> 
                 {(()=>{
                   if(cart.length>0){

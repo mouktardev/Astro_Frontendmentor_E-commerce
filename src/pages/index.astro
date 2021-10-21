@@ -19,7 +19,8 @@ const products = Astro.fetchContent('./products/*.md')
     <div class="flex flex-col justify-center items-center w-full">
     <h1 class="text-4xl font-Kumbh font-bold uppercase py-10 text-gray-900 dark:text-white">products</h1>
     </div>
-    <div class="w-full">
+    <!-- Creats cards fetch from products -->
+    <div class="flex sm:items-center sm:flex-col">
       {products.map((product)=>(
           <Card product={product} client:load/>
       ))}

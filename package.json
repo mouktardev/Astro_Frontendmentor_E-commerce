@@ -1,0 +1,20 @@
+{
+  "name": "@frontendmentor-astro-e-commerce",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^0.20.12",
+    "tailwindcss": "^2.1.2"
+  },
+  "dependencies": {
+    "@nanostores/persistent": "^0.4.1",
+    "gsap": "^3.8.0",
+    "nanostores": "^0.4.9"
+  }
+}

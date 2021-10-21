@@ -1,0 +1,47 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro'
+import Nav from '../components/Nav.jsx';
+import CallToAction from '../components/CallToAction.jsx'
+import Gallery from '../components/Gallery.jsx'
+
+const { content } = Astro.props;
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+  <head>
+    <MainHead title = {content.title} />
+  </head>
+  <body class="dark:bg-gray-900">
+      <div class="xl:container mx-auto">
+        <Nav client:load/>
+        <div class="grid md:grid-cols-2 sm:grid-rows-2">
+          <!-- Col right -->
+          <Gallery images={content.img} thumbnails={content.thumbnails} client:load/>
+          <!-- Col left -->
+          <div class="flex flex-col justify-center items-center">
+                <!-- tag and title -->
+                <div class="w-2/3  mb-16">
+                  <p class="text-lg py-6 text-yellow-600">{content.company}</p>
+                  <h1 class="text-5xl font-bold text-black dark:text-white">{content.title}</h1>
+                </div>
+                <!-- description-->
+                <div class="w-2/3 mb-4">
+                  <h2 class="text-gray-700 text-base dark:text-white">{content.description}</h2>
+                </div>
+                <!-- Price -->
+                <div class=" w-2/3 mb-4">
+                  <div class="flex items-center space-x-4">
+                    <div class="font-bold text-2xl text-black dark:text-white ">{content.price}</div>
+                    <div class="font-bold text-xl text-yellow-600">{content.discount}</div>
+                  </div>
+                    <div class="font-normal text-xl text-gray-600">{content.OriginalPrice}</div>
+                </div>
+                <!-- handle add product and counter  -->
+                <CallToAction data={content} client:load/>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

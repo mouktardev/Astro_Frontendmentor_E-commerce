@@ -2,10 +2,8 @@
 
 ## Solution preview
 
-<video autoPlay="autoplay" loop="loop" class="object-cover" muted playsinline >
-    <source src="./public/design/my-show-case.mp4" type="video/mp4"  />
-</video>
-            
+![Solution preview for E-commerce product page coding challenge](./public/design/showcase.gif)
+
 <!-- <p align="center">
   <img src="images/loopstudios.gif">
 </p>
@@ -48,4 +46,6 @@ My focus for this project is to practices using [Astor Build](https://github.com
 
 [Artmade](https://www.frontendmentor.io/profile/Artmade-studio)
 
-![Design preview for E-commerce product page coding challenge](./public/design/active-states-basket-empty.jpg)
+## 👀 Want to know more about my work?
+
+Feel free to check [Twitter](https://twitter.com/mouktarart) for more works

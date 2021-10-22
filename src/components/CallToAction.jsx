@@ -13,13 +13,13 @@ function CallToAction({data}){
 
 return(
         <div class="flex items-center md:space-x-4  w-2/3 sm:w-full sm:flex-col" onChange={calculatePrice(count,data.price)}>
-           <div class="flex w-full justify-around py-10">
+           <div class="flex w-full justify-between px-3 py-10 sm:py-6">
                 <button class="text-yellow-500" onClick={decreaseCounter}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z" clipRule="evenodd" />
                     </svg>
                 </button>
-                <h1 class="text-xl font-Kumbh font-bold text-gray-900 dark:text-white">{count}</h1>
+                <h1 class="text-xl sm:text-lg font-Kumbh font-bold text-gray-900 dark:text-white">{count}</h1>
                 <button class="text-yellow-500"  onClick={increaseCounter}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clipRule="evenodd" />

@@ -1,5 +1,4 @@
 import { h, Fragment } from 'preact';
-import { useState, useEffect} from 'preact/hooks';
 import { useStore } from 'nanostores/preact';
 import { shoppingCart, deletProduct} from '../store/product.js';
 
@@ -9,20 +8,20 @@ function Cart(){
 
     return(     
             <div class="absolute z-10 w-auto h-auto mx-4 p-5 top-36 right-0 sm:left-0 bg-gray-200 dark:bg-gray-700  rounded-2xl shadow-2xl">
-                <h1 class="font-Kumbh mb-8 font-bold text-lg text-left">Cart</h1> 
+                <h1 class="font-Kumbh mb-8 font-bold text-lg text-left text-gray-700 dark:text-white">Cart</h1> 
                 {(()=>{
                   if(cart.length>0){
                    return(
                      <>
                         {cart.map( (item,i)=> (                    
-                          <div class="flex items-center justify-evenly w-full space-x-4 mb-6">
-                                    <div class="w-10 h-10 rounded-md shadow-md overflow-hidden">
-                                        <img src={item.thumbnail} alt="" />
+                          <div class="flex items-center justify-evenly  w-full mb-6">
+                                    <div class=" w-12 h-10  rounded-md shadow-md overflow-hidden">
+                                        <img class="w-full h-full object-cover" src={item.thumbnail} alt="" />
                                     </div>
-                                    <div>
-                                        <h1 class="font-Kumbh text-base text-left text-gray-700 dark:text-white">{item.title}</h1>
+                                    <div class=' w-full pl-4 '>
+                                        <h1 class="font-Kumbh w-2/3 text-base text-gray-700 dark:text-white whitespace-nowrap sm:overflow-hidden sm:overflow-ellipsis">{item.title}</h1>
                                         <div class="flex space-x-2">
-                                          <h1 class="font-Kumbh text-base text-left text-gray-700 dark:text-white ">{item.price} x {item.quantity}</h1>
+                                          <h1 class="font-Kumbh text-base text-gray-700 dark:text-white ">{item.price} x {item.quantity}</h1>
                                           <h1 class="font-Kumbh font-bold text-base text-gray-700 dark:text-white text-left">{item.finalPrice}</h1>
                                         </div>
                                     </div>
@@ -43,7 +42,7 @@ function Cart(){
                 }else{
                   return(
                     <div class="flex w-80 h-28 sm:h-48 sm:w-full justify-center items-center">
-                        <h1 class="font-Kumbh font-semibold text-base">your cart is empty</h1>
+                        <h1 class="font-Kumbh font-semibold text-base text-gray-600 dark:text-white">your cart is empty</h1>
                     </div>
                     );
                 }

@@ -1,5 +1,5 @@
 import { h, Fragment } from 'preact';
-import { useState, useEffect,useRef } from 'preact/hooks';
+import { useEffect,useRef } from 'preact/hooks';
 import UseMediaQuery from './UseMediaQuery';
 
 function LightBox({setOpen,images,thumbnails,index,setIndex,currntImage,setCurrntImage}){
@@ -56,16 +56,16 @@ function LightBox({setOpen,images,thumbnails,index,setIndex,currntImage,setCurrn
       <div class="absolute space-y-7 flex flex-col justify-center items-center top-0 bottom-0 left-0 right-0">
            <div class="fixed z-10 bg-black clear-both opacity-50 w-full h-full top-0 bottom-0" onClick={()=>setOpen(false)}></div>
             <div class="relative z-20 w-1/3" ref={el=> imageHolder=el}>
-                <button class="absolute right-0 -top-16 text-white" onClick={()=>setOpen(false)}>
+                <button class="absolute right-0 -top-16 text-white hover:text-yellow-600" onClick={()=>setOpen(false)}>
                         <svg className="h-6 w-6" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="currentColor" fill-rule="evenodd"/></svg>
                 </button>  
                 <div class="absolute bottom-1/2 -left-7 -right-7 flex justify-between" >
-                    <button className="rounded-full p-3 bg-white" onClick={()=>previousImage()}>
+                    <button className="rounded-full p-3 bg-white  hover:text-yellow-600" onClick={()=>previousImage()}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                     </button>
-                    <button className="rounded-full p-3 bg-white" onClick={()=>nextImage()}>
+                    <button className="rounded-full p-3 bg-white hover:text-yellow-600" onClick={()=>nextImage()}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                         </svg>
@@ -73,10 +73,10 @@ function LightBox({setOpen,images,thumbnails,index,setIndex,currntImage,setCurrn
                 </div> 
                 <img class="w-full h-full rounded-2xl object-cover" src={currntImage} alt="" />
             </div>
-            <div class="w-1/4 z-20 flex space-x-3">
+            <div class="w-1/4 z-20 flex justify-between">
                 {thumbnails.map((thumbnail,i)=>(
-                <button class="overflow-hidden rounded-2xl cursor-pointer hover:opacity-40" ref={addRef} onClick={()=> selectedImage(i)}>
-                    <img src={thumbnail} alt=""/>
+                <button class="w-24 overflow-hidden rounded-2xl cursor-pointer bg-white" ref={addRef} onClick={()=> selectedImage(i)}>
+                    <img class="w-full h-full hover:opacity-40 object-cover" src={thumbnail} alt={`thumbnail-${i}`}/>
                 </button>)
                 )}
             </div>

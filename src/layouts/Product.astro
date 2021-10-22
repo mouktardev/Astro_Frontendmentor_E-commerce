@@ -6,8 +6,7 @@ import CallToAction from '../components/CallToAction.jsx'
 import Gallery from '../components/Gallery.jsx'
 
 const { content } = Astro.props;
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+
 ---
 <html lang="en">
   <head>
@@ -16,27 +15,27 @@ const { content } = Astro.props;
   <body class="dark:bg-gray-900">
       <div class="xl:container mx-auto">
         <Nav client:load/>
-        <div class="grid md:grid-cols-2 sm:grid-flow-row">
+        <div class="grid mt-6 md:mt-20 md:grid-cols-2 sm:grid-flow-row">
           <!-- Col right -->
           <Gallery images={content.img} thumbnails={content.thumbnails} client:load/>
           <!-- Col left -->
           <div class="flex flex-col px-10 md:justify-center md:items-center">
                 <!-- tag and title -->
-                <div class="w-2/3 sm:w-full mb-16">
-                  <p class="text-lg py-6 text-yellow-600">{content.company}</p>
-                  <h1 class="text-5xl font-bold text-black dark:text-white">{content.title}</h1>
+                <div class="w-2/3 sm:w-full mb-16 sm:mb-7">
+                  <p class="text-lg sm:py-4 py-6 text-yellow-600">{content.company}</p>
+                  <h1 class="text-5xl sm:text-3xl font-bold text-black dark:text-white">{content.title}</h1>
                 </div>
                 <!-- description-->
                 <div class="w-2/3 sm:w-full mb-4">
                   <h2 class="text-gray-700 text-base dark:text-white">{content.description}</h2>
                 </div>
                 <!-- Price -->
-                <div class=" w-2/3 sm:w-full mb-4">
+                <div class=" w-2/3 flex justify-between md:flex-col sm:w-full mb-4">
                   <div class="flex items-center space-x-4">
                     <div class="font-bold text-2xl text-black dark:text-white ">{content.price}</div>
                     <div class="font-bold text-xl text-yellow-600">{content.discount}</div>
                   </div>
-                    <div class="font-normal text-xl text-gray-600">{content.OriginalPrice}</div>
+                    <del class="font-normal text-xl text-gray-600">{content.OriginalPrice}</del>
                 </div>
                 <!-- handle add product and counter  -->
                 <CallToAction data={content} client:load/>

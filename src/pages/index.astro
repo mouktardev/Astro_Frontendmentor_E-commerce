@@ -16,10 +16,10 @@ const products = Astro.fetchContent('./products/*.md')
   <body class="dark:bg-gray-900">
   <div class="container mx-auto">
     <Nav client:load/>
-    <div class="flex flex-col justify-center items-center w-full">
-    <h1 class="text-4xl font-Kumbh font-bold uppercase py-10 text-gray-900 dark:text-white">products</h1>
+    <div class="flex flex-col justify-center py-10 md:mb-16 items-center w-full">
+        <h1 class="text-4xl font-Kumbh font-bold uppercase text-gray-900 dark:text-white">products</h1>
     </div>
-    <!-- Creats cards fetch from products -->
+    <!-- Creats cards from products md files -->
     <div class="flex sm:items-center sm:flex-col">
       {products.map((product)=>(
           <Card product={product} client:load/>

@@ -4,9 +4,6 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      gridTemplateColumns: {
-        'layout': '64px minmax(0, 1fr)',
-      },
       zIndex: {
         '-1': '-1',
       },

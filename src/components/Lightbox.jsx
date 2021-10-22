@@ -73,9 +73,9 @@ function LightBox({setOpen,images,thumbnails,index,setIndex,currntImage,setCurrn
                 </div> 
                 <img class="w-full h-full rounded-2xl object-cover" src={currntImage} alt="" />
             </div>
-            <div class="w-1/4 z-20 flex justify-between">
+            <div class="2xl:w-1/4 xl:w-1/3 z-20 flex justify-between">
                 {thumbnails.map((thumbnail,i)=>(
-                <button class="w-24 overflow-hidden rounded-2xl cursor-pointer bg-white" ref={addRef} onClick={()=> selectedImage(i)}>
+                <button class="w-24  overflow-hidden rounded-2xl cursor-pointer bg-white" ref={addRef} onClick={()=> selectedImage(i)}>
                     <img class="w-full h-full hover:opacity-40 object-cover" src={thumbnail} alt={`thumbnail-${i}`}/>
                 </button>)
                 )}

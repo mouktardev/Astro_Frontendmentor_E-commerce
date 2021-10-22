@@ -2,6 +2,8 @@
 
 ## Solution preview 😎
 
+[website link](https://astro-frontendmentor-e-commerce.vercel.app)
+
 ![Solution preview for E-commerce product page coding challenge](./public/design/showcase.gif)
 
 <!-- <p align="center">
@@ -14,6 +16,7 @@
 The challenge is to build out [E-commerce product page](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6) and get it looking as close to the design as possible, and i added my own feature as bonus 😎
 
 ## Overview
+
 - Design reference found in `/design`.
 - In `src/page/product` you will find md files for each item easily edit and add product.
 - `src/layout/Product.astro` template design for all product using [astro component](https://docs.astro.build/core-concepts/astro-components/) .

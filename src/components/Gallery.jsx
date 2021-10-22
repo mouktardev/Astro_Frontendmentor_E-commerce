@@ -72,11 +72,11 @@ function Gallery({images,thumbnails}){
                         </svg>
                     </button>
                 </div> }
-                <div class=" w-3/5 sm:w-full overflow-hidden md:rounded-2xl cursor-pointer" ref={el=> imageHolder=el} onClick={()=>{ if(!isPageWide) setOpen(true)}}>
+                <div class="2xl:w-3/5 xl:w-3/4 sm:w-full overflow-hidden md:rounded-2xl cursor-pointer" ref={el=> imageHolder=el} onClick={()=>{ if(!isPageWide) setOpen(true)}}>
                     <img class="w-full h-full object-cover" src={currntImage} alt=""/>
                 </div>
                 {/* thumbnails render on desktop */}
-                {!isPageWide && <div class="w-3/5 flex justify-between">
+                {!isPageWide && <div class="2xl:w-3/5 xl:w-3/4 flex justify-between">
                     {thumbnails.map((thumbnail,i)=>(
                     <button class="w-24 overflow-hidden rounded-2xl bg-white cursor-pointer" ref={addRef} onClick={()=>selectedImage(i)}>
                         <img  class="w-full h-full hover:opacity-40 object-cover" src={thumbnail} alt={`thumbnail-${i}`}/>

@@ -1,6 +1,6 @@
 # Frontend Mentor - E-commerce product page
 
-## Solution preview
+## Solution preview 😎
 
 ![Solution preview for E-commerce product page coding challenge](./public/design/showcase.gif)
 
@@ -35,13 +35,13 @@ The challenge is to build out [E-commerce product page](https://www.frontendment
 
 My focus for this project is to practices using [Astor Build](https://github.com/snowpackjs/astro) as it a still new technology but powerful workflow. I was able to implement:
 
-1. Cart store your items even when site is closed.
-2. Layout template for each product just add the md file and astro build the page with the right end-point
-3. Gallery scroll and light-box without any fancy library.
-4. Dark mode 😎.
-5. Styling with tailwind css for mobile and Dak Mode.
-6. Mobile nav animations using Gsap 3
-7. One file Component everything in on concise file.
+1. Manging shopping Cart and keep items even when site is closed.
+2. How to write Astro Layout template for each product with the right end-point.
+3. Making the image gallery and light-box without any fancy library and fully interactive.
+4. tailwindcss Dark mode and how to use tailwindcss config file for customization.
+5. Styling with tailwindcss for mobile.
+6. Mobile nav animations using Gsap 3.
+7. Keep each Component everything in on concise file.
 
 ## My profile at Frontendmentor
 

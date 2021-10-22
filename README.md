@@ -13,10 +13,11 @@
 
 The challenge is to build out [E-commerce product page](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6) and get it looking as close to the design as possible, and i added my own feature as bonus 😎
 
+## Overview
 - Design reference found in `/design`.
 - In `src/page/product` you will find md files for each item easily edit and add product.
 - `src/layout/Product.astro` template design for all product using [astro component](https://docs.astro.build/core-concepts/astro-components/) .
-- In `src/store` using the amazing [nanostores](https://github.com/nanostores/nanostores) for state managing and to moving logic from components to stores.
+- In `src/store` using the amazing [nanostores](https://github.com/nanostores/nanostores) for state managing and moving logic from components to stores.
 - Store your items and price calculation are kept in local store until you delete an item.
 - `UseMediaQuery.jsx` hook for component with conditional rendering element based on their device's screen size.
 - See hover states for all interactive elements on the page.

@@ -12,8 +12,8 @@ function CallToAction({data}){
     const product = { title: data.title , thumbnail: data.thumbnails[0] , price: data.price , quantity:count , finalPrice:finalPrice};    
 
 return(
-        <div class="flex items-center md:space-x-4  w-2/3 sm:w-full sm:flex-col" onChange={calculatePrice(count,data.price)}>
-           <div class="flex bg-gray-200 dark:bg-gray-800 w-60 justify-between px-3 py-5 rounded-xl sm:py-6">
+        <div class="flex items-center md:space-x-4 w-2/3 sm:w-full sm:flex-col sm:space-y-4" onChange={calculatePrice(count,data.price)}>
+           <div class="flex bg-gray-200 dark:bg-gray-800 w-60 sm:w-full justify-between px-3  py-5  rounded-xl ">
                 <button class="text-yellow-500" onClick={decreaseCounter}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                         <path  d="M5 10a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1z"/>

@@ -61,19 +61,19 @@ function Gallery({images,thumbnails}){
                     onClick={()=>previousImage()}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+                            <path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"/>
                         </svg>
                     </button>
                     <button className="rounded-full p-2 bg-white hover:text-yellow-600" 
                     onClick={()=>nextImage()}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                            <path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
                         </svg>
                     </button>
                 </div> }
                 <div class="2xl:w-3/5 xl:w-3/4 sm:w-full overflow-hidden md:rounded-2xl cursor-pointer" ref={el=> imageHolder=el} onClick={()=>{ if(!isPageWide) setOpen(true)}}>
-                    <img class="w-full h-full object-cover" src={currntImage} alt=""/>
+                    <img class="w-full h-full object-cover" src={currntImage} alt="image preview" aria-label="main image"/>
                 </div>
                 {/* thumbnails render on desktop */}
                 {!isPageWide && <div class="2xl:w-3/5 xl:w-3/4 flex justify-between">

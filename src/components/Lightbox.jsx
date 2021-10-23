@@ -62,24 +62,24 @@ function LightBox({setOpen,images,thumbnails,index,setIndex,currntImage,setCurrn
                 <div class="absolute bottom-1/2 -left-7 -right-7 flex justify-between" >
                     <button className="rounded-full p-3 bg-white  hover:text-yellow-600" onClick={()=>previousImage()}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+                            <path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"/>
                         </svg>
                     </button>
                     <button className="rounded-full p-3 bg-white hover:text-yellow-600" onClick={()=>nextImage()}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                            <path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
                         </svg>
                     </button>
                 </div> 
-                <img class="w-full h-full rounded-2xl object-cover" src={currntImage} alt="" />
+                <img class="w-full h-full rounded-2xl object-cover" src={currntImage} alt="light box preview" aria-label="light box main image" />
             </div>
-            <div class="2xl:w-1/4 xl:w-1/3 z-20 flex justify-between">
+            <ul class="w-1/3 z-20 flex justify-between">
                 {thumbnails.map((thumbnail,i)=>(
-                <button class="w-24  overflow-hidden rounded-2xl cursor-pointer bg-white" ref={addRef} onClick={()=> selectedImage(i)}>
+                <li class="w-24 overflow-hidden rounded-2xl cursor-pointer bg-white" ref={addRef} onClick={()=> selectedImage(i)}>
                     <img class="w-full h-full hover:opacity-40 object-cover" src={thumbnail} alt={`thumbnail-${i}`}/>
-                </button>)
+                </li>)
                 )}
-            </div>
+            </ul>
         </div>
     );
 }

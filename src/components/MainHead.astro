@@ -13,3 +13,14 @@ const { title = 'Ecommerce | Home' } = Astro.props;
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 <link rel="shortcut icon" href={logo} type="image/x-icon" />
+
+<!-- This is intentionally inlined to avoid FOUC -->
+<script>
+  const root = document.documentElement;
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    root.classList.add('dark');
+  } else {
+    root.classList.remove('dark');
+  }
+</script>

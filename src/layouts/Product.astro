@@ -14,7 +14,7 @@ const { content } = Astro.props;
   </head>
   <body class="bg-white dark:bg-gray-900">
       <div class="container mx-auto xl:px-20 pb-8">
-        <Nav client:load/>
+        <Nav client:visible/>
         <div class="grid mt-6 md:mt-20 md:grid-cols-2 sm:grid-flow-row">
           <!-- Col right -->
           <Gallery images={content.img} thumbnails={content.thumbnails} client:load/>

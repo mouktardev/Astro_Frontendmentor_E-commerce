@@ -36,7 +36,7 @@ The challenge is to build out [E-commerce product page](https://www.frontendment
 
 ## Learning outcomes
 
-My focus for this project is to practices using [Astor Build](https://github.com/snowpackjs/astro) as it a still new technology but powerful workflow. I was able to implement:
+My focus for this project is to practices using [Astro Build](https://github.com/snowpackjs/astro) as it a still new technology but powerful workflow. I was able to implement:
 
 1. Manging shopping Cart and keep items even when site is closed.
 2. How to write Astro Layout template for each product with the right end-point.

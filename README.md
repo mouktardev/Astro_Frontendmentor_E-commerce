@@ -52,4 +52,4 @@ My focus for this project is to practices using [Astro Build](https://github.com
 
 ## 👀 Want to know more about my work?
 
-Feel free to check [Twitter](https://twitter.com/mouktarart) for more works
+Feel free to check [Twitter](https://twitter.com/mouktardev) for more works
